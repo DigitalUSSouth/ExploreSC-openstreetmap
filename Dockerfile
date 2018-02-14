@@ -38,5 +38,7 @@ COPY apache-conf.conf /etc/apache2/sites-enabled/000-default.conf
 RUN apt install -y grep
 
 EXPOSE 80
+RUN apt install -y psmisc
+COPY backgroundtasks.sh /backgroundtasks.sh
 COPY runtileserver.sh /runtileserver.sh
 ENTRYPOINT /runtileserver.sh

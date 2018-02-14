@@ -2,6 +2,8 @@
 This repository contains a customized docker image of the OpenStreetMap tile server, used for the [ExploreSC](https://github.com/DigitalUSSouth/ExploreSC) mobile app. The map only contains detailed data for South Carolina, but it may be expanded easily to cover a wider area.
 
 ## Usage
+- Download shapefiles 
+```cd osm/openstreetmap-carto-2.41.0 && ./get-shapefiles.sh```
 - Build the docker image
 ```docker build -t exploresc-tileserver:1 . ```
 - Run container on port 3000
